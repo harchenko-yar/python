@@ -76,12 +76,12 @@ WSGI_APPLICATION = 'hello.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
+        'ENGINE': 'django.db.backends.mysql',
         'NAME': 'jour_db',
-        'USER': 'gpadmin',
-        'PASSWORD': 'gparray',
+        'USER': 'root',
+        'PASSWORD': 'admin',
         'HOST': 'localhost',
-        'PORT': '5432'
+        'PORT': '3306'
 
     }
 }

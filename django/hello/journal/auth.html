@@ -1,8 +1,8 @@
 <body bgcolor=green>
-<h2 align=center>Регистрация</h2>
+<h2 align=center>Авторизация</h2>
 
-<form align=center method="POST"> {% esrf_token $}
-({suсcess}}
+<form align=center method="POST"> {% csrf_token %}
+{{suсcess}}
 
 <br /><br />
 <label>
@@ -17,11 +17,16 @@ value="введите логин" />
 value="введите пароль" />
 </label><br /><br />
 
-<input type="submit" value="Зарегистрироваться" />
+<input type="submit" value="Войти" />
 </form>
 
-<form align=center  action="http: //127.0.0.1:8000/auth" method="GET">
-<input type="submit" value="К окну авторизации:" />
+<form align=center  action="http: //127.0.0.1:8000/reg" method="GET">
+<input type="submit" value="К окну регистрации:" />
+
+<form align=center  action="http: //127.0.0.1:8000/main" method="GET">
+{% if auth_f == True %}
+<input type="submit" value="Войти:" />
+{% endif %}
 
 </form>
 </body>
